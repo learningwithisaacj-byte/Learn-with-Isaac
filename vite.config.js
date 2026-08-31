@@ -4,6 +4,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [tailwindcss()],
+  base: '/Learn-with-Isaac/',
   build: {
     rollupOptions: {
       input: {
