@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags - AI: Update these for each website -->
+  <title>Learn with Isaac - Online Courses for Beginners</title>
+  <meta name="description" content="Step-by-step online courses for beginners — Canva design, YouTube, video editing, freelancing, social media, AI tools, and WordPress.">
+  <meta name="keywords" content="canva course, youtube course, graphic design course, freelancing course, social media course, wordpress course, online courses for beginners">
+
+  <!-- Open Graph Meta Tags - AI: Update for social media sharing -->
+  <meta property="og:title" content="Learn with Isaac - Online Courses for Beginners">
+  <meta property="og:description" content="Step-by-step online courses for beginners — Canva design, YouTube, video editing, freelancing, social media, AI tools, and WordPress.">
+  <meta property="og:url" content="https://isaacjonathan.in">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles - Don't edit these directly -->
+  <link rel="stylesheet" href="/src/main.css">
+
+  <!-- Alpine.js for interactivity -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="flex h-full flex-col bg-white font-sans antialiased">
+
+  <!-- Header Navigation -->
+  <header class="py-6">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="relative z-50 flex justify-between" x-data="{ mobileMenuOpen: false }">
+        <div class="flex items-center md:gap-x-12">
+          <!-- Logo -->
+          <a href="#" aria-label="Home" class="flex items-center gap-2">
+            <img src="/images/logo.png" alt="Learn with Isaac logo" class="h-10 w-auto">
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex md:gap-x-6">
+            <a href="#home" class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Home</a>
+            <a href="#courses" class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Courses</a>
+            <a href="#curriculum" class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">What You'll Learn</a>
+            <a href="#who" class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">About</a>
+            <a href="#contact" class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Contact</a>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-x-5 md:gap-x-8">
+          <a href="#courses" class="btn-3d rounded-full bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-indigo-700">
+            Enroll Now
+          </a>
+
+          <!-- Mobile menu button -->
+          <div class="-mr-1 md:hidden">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="relative z-10 flex h-8 w-8 items-center justify-center">
+              <svg class="h-3.5 w-3.5 overflow-visible stroke-slate-700" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M0 1H14M0 7H14M0 13H14" :class="mobileMenuOpen && 'scale-90 opacity-0'" class="origin-center transition"></path>
+                <path d="M2 2L12 12M12 2L2 12" :class="!mobileMenuOpen && 'scale-90 opacity-0'" class="origin-center transition"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div x-show="mobileMenuOpen"
+             x-transition:enter="transition ease-out duration-150"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-100"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95"
+             @click.away="mobileMenuOpen = false"
+             class="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 md:hidden">
+          <a href="#home" @click="mobileMenuOpen = false" class="block w-full p-2">Home</a>
+          <a href="#courses" @click="mobileMenuOpen = false" class="block w-full p-2">Courses</a>
+          <a href="#curriculum" @click="mobileMenuOpen = false" class="block w-full p-2">What You'll Learn</a>
+          <a href="#who" @click="mobileMenuOpen = false" class="block w-full p-2">About</a>
+          <a href="#contact" @click="mobileMenuOpen = false" class="block w-full p-2">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-auto">
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden py-20 sm:py-28">
+      <!-- Decorative floating 3D shapes -->
+      <div class="pointer-events-none absolute inset-0 hidden sm:block" aria-hidden="true">
+        <div class="hero-3d-float absolute left-[8%] top-16" style="animation-delay:0s">
+          <div class="h-20 w-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 opacity-20 shadow-2xl [transform:perspective(600px)_rotateX(35deg)_rotateY(-20deg)_rotate(-8deg)]"></div>
+        </div>
+        <div class="hero-3d-float absolute right-[10%] top-10" style="animation-delay:1.2s">
+          <div class="h-14 w-14 rounded-xl bg-gradient-to-br from-violet-400 to-indigo-400 opacity-25 shadow-xl [transform:perspective(600px)_rotateX(-25deg)_rotateY(18deg)_rotate(12deg)]"></div>
+        </div>
+        <div class="hero-3d-float absolute left-[16%] bottom-6" style="animation-delay:0.6s">
+          <div class="h-12 w-12 rounded-full bg-indigo-200 opacity-40 shadow-lg [transform:perspective(600px)_rotateX(20deg)]"></div>
+        </div>
+        <div class="hero-3d-float absolute right-[18%] bottom-10" style="animation-delay:2s">
+          <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-indigo-300 to-violet-300 opacity-25 shadow-xl [transform:perspective(600px)_rotateX(30deg)_rotateY(-15deg)_rotate(-6deg)]"></div>
+        </div>
+      </div>
+
+      <div class="container relative mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <p class="mb-4 inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-semibold text-indigo-600">
+            Learn with Isaac Courses
+          </p>
+          <h1 class="font-display text-4xl tracking-tight text-slate-900 sm:text-6xl">
+            Step-by-Step Courses for Complete Beginners
+          </h1>
+          <p class="mt-6 text-lg tracking-tight text-slate-700">
+            Design, video, freelancing, and content creation courses — practical, easy-to-follow training with no prior experience needed.
+          </p>
+          <div class="mt-10 flex justify-center gap-x-6">
+            <a href="#courses" class="btn-3d rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-indigo-700">
+              See Courses
+            </a>
+            <a href="#who" class="btn-3d rounded-full bg-slate-100 px-6 py-3 text-sm font-semibold text-slate-900 transition-colors duration-200 hover:bg-slate-200">
+              Is This For Me?
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Cards Section -->
+    <section id="courses" class="py-20 sm:py-32 bg-slate-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+            Courses
+          </h2>
+          <p class="mt-4 text-lg tracking-tight text-slate-700">
+            Practical courses to take you from zero to confident, real-world skills.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Course 1 -->
+          <div class="tilt-3d flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow duration-200 hover:shadow-md">
+            <span class="text-2xl font-bold text-indigo-600">₹499</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">Graphic Designing (Canva) Course</h3>
+            <p class="mt-2 flex-auto text-sm text-slate-600">Learn to design scroll-stopping social media posts, brand kits, and marketing graphics using Canva — no prior design experience required.</p>
+            <a href="/canva-course.html" class="btn-3d mt-6 block w-full rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
+              Check Details
+            </a>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="tilt-3d flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow duration-200 hover:shadow-md">
+            <span class="text-2xl font-bold text-indigo-600">₹499</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">YouTube Course for Beginners</h3>
+            <p class="mt-2 flex-auto text-sm text-slate-600">Learn how to plan, film, edit, and grow a YouTube channel from scratch — no prior video or editing experience required.</p>
+            <a href="/youtube-course.html" class="btn-3d mt-6 block w-full rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
+              Check Details
+            </a>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="tilt-3d flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow duration-200 hover:shadow-md">
+            <span class="text-2xl font-bold text-indigo-600">₹499</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">Content Creation &amp; Video Editing</h3>
+            <p class="mt-2 flex-auto text-sm text-slate-600">Edit scroll-stopping Reels, TikToks, and YouTube Shorts using CapCut and Premiere Pro basics — no editing experience required.</p>
+            <a href="/video-editing-course.html" class="btn-3d mt-6 block w-full rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
+              Check Details
+            </a>
+          </div>
+
+          <!-- Course 4 -->
+          <div class="tilt-3d flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow duration-200 hover:shadow-md">
+            <span class="text-2xl font-bold text-indigo-600">₹499</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">Freelancing Fundamentals</h3>
+            <p class="mt-2 flex-auto text-sm text-slate-600">Learn how to find clients, price your work, and get paid as a freelance designer, editor, or creator — from your first gig to steady income.</p>
+            <a href="/freelancing-course.html" class="btn-3d mt-6 block w-full rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
+              Check Details
+            </a>
+          </div>
+
+          <!-- Course 5 -->
+          <div class="tilt-3d flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow duration-200 hover:shadow-md">
+            <span class="text-2xl font-bold text-indigo-600">₹499</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">Social Media Management</h3>
+            <p class="mt-2 flex-auto text-sm text-slate-600">Plan, schedule, and grow social media accounts for yourself or clients — content calendars, posting strategy, and basic analytics.</p>
+            <a href="/social-media-course.html" class="btn-3d mt-6 block w-full rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
+              Check Details
+            </a>
+          </div>
+
+          <!-- Course 6 -->
+          <div class="tilt-3d flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow duration-200 hover:shadow-md">
+            <span class="text-2xl font-bold text-indigo-600">₹499</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">Personal Branding &amp; Portfolio Building</h3>
+            <p class="mt-2 flex-auto text-sm text-slate-600">Turn your design, video, or creative skills into a portfolio and online presence that attracts clients or job opportunities.</p>
+            <a href="/personal-branding-course.html" class="btn-3d mt-6 block w-full rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
+              Check Details
+            </a>
+          </div>
+
+          <!-- Course 7 -->
+          <div class="tilt-3d flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow duration-200 hover:shadow-md">
+            <span class="text-2xl font-bold text-indigo-600">₹499</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">AI Tools for Content Creators</h3>
+            <p class="mt-2 flex-auto text-sm text-slate-600">Use AI tools like ChatGPT and image/video generators to plan content, write faster, and speed up your creative workflow.</p>
+            <a href="/ai-tools-course.html" class="btn-3d mt-6 block w-full rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
+              Check Details
+            </a>
+          </div>
+
+          <!-- Course 8 -->
+          <div class="tilt-3d flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow duration-200 hover:shadow-md">
+            <span class="text-2xl font-bold text-indigo-600">₹499</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">WordPress for Beginners</h3>
+            <p class="mt-2 flex-auto text-sm text-slate-600">Build and launch your own website using WordPress — no coding required — from picking a theme to publishing your first pages.</p>
+            <a href="/wordpress-course.html" class="btn-3d mt-6 block w-full rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
+              Check Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="py-20 sm:py-32">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+            What You'll Learn
+          </h2>
+          <p class="mt-4 text-lg tracking-tight text-slate-700">
+            Tap a course to see what's covered, from your first steps to real, usable results.
+          </p>
+        </div>
+
+        <div class="mt-16 max-w-3xl mx-auto divide-y divide-slate-200 rounded-2xl border border-slate-200" x-data="{ open: 1 }">
+
+          <!-- Course 1 -->
+          <div>
+            <button @click="open === 1 ? open = null : open = 1" class="flex w-full items-center justify-between gap-4 p-6 text-left">
+              <span class="font-display text-lg font-semibold text-slate-900">Graphic Designing (Canva) Course</span>
+              <svg :class="open === 1 && 'rotate-180'" class="h-5 w-5 flex-none text-indigo-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div x-show="open === 1" x-transition class="px-6 pb-6">
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Navigate the Canva dashboard, templates, and design tools with confidence</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Set up a Brand Kit and design Instagram posts, Reels covers, and YouTube thumbnails</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Pair fonts, use icons/photos, and apply color palettes that match a brand</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Build a logo and brand kit, then export designs for web, print, and social</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Present your design work and take on your first design projects</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div>
+            <button @click="open === 2 ? open = null : open = 2" class="flex w-full items-center justify-between gap-4 p-6 text-left">
+              <span class="font-display text-lg font-semibold text-slate-900">YouTube Course for Beginners</span>
+              <svg :class="open === 2 && 'rotate-180'" class="h-5 w-5 flex-none text-indigo-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div x-show="open === 2" x-transition class="px-6 pb-6">
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Set up and brand a channel, choose a niche, and plan a sustainable content strategy</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Script, storyboard, and film clean video using just a phone and basic gear</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Edit with cuts, transitions, text, and music using free or low-cost tools</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Design click-worthy thumbnails and titles that help videos get discovered</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Read YouTube Analytics and understand the path to monetization</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div>
+            <button @click="open === 3 ? open = null : open = 3" class="flex w-full items-center justify-between gap-4 p-6 text-left">
+              <span class="font-display text-lg font-semibold text-slate-900">Content Creation &amp; Video Editing</span>
+              <svg :class="open === 3 && 'rotate-180'" class="h-5 w-5 flex-none text-indigo-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div x-show="open === 3" x-transition class="px-6 pb-6">
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Cut, trim, and sequence clips into a polished short-form video</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Add captions, transitions, sound effects, and trending audio</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Color grade and export for Instagram, TikTok, and YouTube Shorts</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Build a repeatable editing workflow so you can publish faster</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Avoid the most common mistakes that make edits look amateur</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Course 4 -->
+          <div>
+            <button @click="open === 4 ? open = null : open = 4" class="flex w-full items-center justify-between gap-4 p-6 text-left">
+              <span class="font-display text-lg font-semibold text-slate-900">Freelancing Fundamentals</span>
+              <svg :class="open === 4 && 'rotate-180'" class="h-5 w-5 flex-none text-indigo-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div x-show="open === 4" x-transition class="px-6 pb-6">
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Build a simple portfolio and profile on freelance platforms</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Write proposals and pitches that actually get replies</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Price your services and negotiate with confidence</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Set up contracts and invoices, and get paid safely</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Manage clients and deadlines without burning out</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Course 5 -->
+          <div>
+            <button @click="open === 5 ? open = null : open = 5" class="flex w-full items-center justify-between gap-4 p-6 text-left">
+              <span class="font-display text-lg font-semibold text-slate-900">Social Media Management</span>
+              <svg :class="open === 5 && 'rotate-180'" class="h-5 w-5 flex-none text-indigo-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div x-show="open === 5" x-transition class="px-6 pb-6">
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Build a content calendar and batch-create posts in advance</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Use scheduling tools to plan and automate posting</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Write captions and hashtags that improve reach</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Read basic analytics to see what content is working</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Handle comments, DMs, and community engagement professionally</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Course 6 -->
+          <div>
+            <button @click="open === 6 ? open = null : open = 6" class="flex w-full items-center justify-between gap-4 p-6 text-left">
+              <span class="font-display text-lg font-semibold text-slate-900">Personal Branding &amp; Portfolio Building</span>
+              <svg :class="open === 6 && 'rotate-180'" class="h-5 w-5 flex-none text-indigo-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div x-show="open === 6" x-transition class="px-6 pb-6">
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Define your niche and personal brand story</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Build a simple portfolio website or page to showcase your work</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Curate and present your best projects professionally</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Optimize your social profiles and bio for credibility</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Network and reach out to potential clients or employers</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Course 7 -->
+          <div>
+            <button @click="open === 7 ? open = null : open = 7" class="flex w-full items-center justify-between gap-4 p-6 text-left">
+              <span class="font-display text-lg font-semibold text-slate-900">AI Tools for Content Creators</span>
+              <svg :class="open === 7 && 'rotate-180'" class="h-5 w-5 flex-none text-indigo-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div x-show="open === 7" x-transition class="px-6 pb-6">
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Use ChatGPT to brainstorm ideas, scripts, and captions</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Generate and edit images with AI tools for graphics and thumbnails</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Speed up video editing and repurposing with AI-assisted tools</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Understand the limits of AI tools and when to add a human touch</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Build simple AI-powered workflows that save hours each week</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Course 8 -->
+          <div>
+            <button @click="open === 8 ? open = null : open = 8" class="flex w-full items-center justify-between gap-4 p-6 text-left">
+              <span class="font-display text-lg font-semibold text-slate-900">WordPress for Beginners</span>
+              <svg :class="open === 8 && 'rotate-180'" class="h-5 w-5 flex-none text-indigo-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div x-show="open === 8" x-transition class="px-6 pb-6">
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Set up hosting, a domain, and install WordPress</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Choose and customize a theme to match your brand</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Create pages, posts, and menus for a complete website</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Add plugins for contact forms, SEO, and speed</li>
+                <li class="flex gap-x-3"><svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg>Publish and maintain your site with confidence</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Is This For Section -->
+    <section id="who" class="py-20 sm:py-32 bg-slate-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+            Who Are These Courses For?
+          </h2>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div class="tilt-3d rounded-2xl bg-white p-8 shadow-sm">
+            <div class="icon-3d w-12 h-12 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="mt-6 text-lg font-semibold text-slate-900">Complete Beginners</h3>
+            <p class="mt-2 text-slate-600">Never used Canva or filmed a video before? You'll start from the basics and build up step by step, no prior experience needed.</p>
+          </div>
+
+          <div class="tilt-3d rounded-2xl bg-white p-8 shadow-sm">
+            <div class="icon-3d w-12 h-12 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="mt-6 text-lg font-semibold text-slate-900">Small Business Owners &amp; Content Creators</h3>
+            <p class="mt-2 text-slate-600">Create your own on-brand graphics and videos in-house instead of outsourcing every design or edit.</p>
+          </div>
+
+          <div class="tilt-3d rounded-2xl bg-white p-8 shadow-sm">
+            <div class="icon-3d w-12 h-12 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <h3 class="mt-6 text-lg font-semibold text-slate-900">Aspiring Freelancers</h3>
+            <p class="mt-2 text-slate-600">Build a portfolio of real design or video work and learn the skills needed to take on your first paid clients.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-indigo-600 py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-display text-3xl tracking-tight text-white sm:text-4xl">
+            Ready to Get Started?
+          </h2>
+          <p class="mt-4 text-lg tracking-tight text-indigo-100">
+            Pick a course above, or get in touch if you're not sure where to begin.
+          </p>
+          <a href="#contact" class="btn-3d mt-8 inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-indigo-600 transition-colors duration-200 hover:bg-indigo-50">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hostinger Referral CTA -->
+    <section class="py-20 sm:py-32 bg-slate-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="tilt-3d mx-auto max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-violet-600 to-indigo-600 px-8 py-12 text-center shadow-xl sm:px-16 sm:py-16">
+          <p class="text-sm font-semibold uppercase tracking-wide text-violet-200">Recommended Tool</p>
+          <h2 class="mt-3 font-display text-3xl tracking-tight text-white sm:text-4xl">
+            Building a Website? Get Hosting with Hostinger
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-violet-100">
+            The web hosting I personally use and recommend for beginners — fast, affordable, and easy to set up.
+          </p>
+          <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href="https://www.hostinger.com/in?REFERRALCODE=ISAAC20" target="_blank" rel="noopener noreferrer sponsored" class="btn-3d inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-violet-700 transition-colors duration-200 hover:bg-violet-50">
+              Get Hosting with Hostinger
+            </a>
+            <span class="text-sm text-violet-100">Use code <strong class="text-white">ISAAC20</strong> for a discount</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 sm:py-32">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+            Contact
+          </h2>
+          <p class="mt-4 text-lg tracking-tight text-slate-700">
+            Questions about a course? Reach out below.
+          </p>
+        </div>
+
+        <div class="mt-16 max-w-xl mx-auto">
+          <div class="tilt-3d bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+            <div class="space-y-4">
+              <p class="text-slate-600">
+                <strong>Email:</strong> <a href="mailto:learningwithisaacj@gmail.com" class="text-indigo-600 hover:underline">learningwithisaacj@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-16">
+        <div class="flex justify-center">
+          <a href="#" class="flex items-center gap-2">
+            <img src="/images/logo.png" alt="Learn with Isaac logo" class="h-9 w-auto">
+          </a>
+        </div>
+        <p class="mt-4 text-center text-sm text-slate-600 max-w-md mx-auto">
+          Step-by-step online courses for beginners who want to build real, practical skills.
+        </p>
+        <nav class="mt-10 text-sm" aria-label="Footer navigation">
+          <div class="-my-1 flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <a href="#home" class="rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Home</a>
+            <a href="#courses" class="rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Courses</a>
+            <a href="#who" class="rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">About</a>
+            <a href="#contact" class="rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Contact</a>
+          </div>
+        </nav>
+      </div>
+      <div class="flex flex-col items-center border-t border-slate-400/10 py-10">
+        <p class="text-sm text-slate-500">
+          Copyright &copy; <span x-text="new Date().getFullYear()"></span> Learn with Isaac. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
